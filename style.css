@@ -1,0 +1,334 @@
+html,body {
+    margin:0; 
+    padding:0; 
+    height:100%;
+    width:100%;
+    font-family: verdana;
+
+}
+body {	
+	background:url('images/bg.png');
+}
+
+#scroller {
+	overflow: hidden;
+	height: 416px;
+	width: 410px;
+	color: white;
+}
+
+#scrollerContent{
+	width: 1230px;
+	height: 416px;
+	-webkit-transition: left 1s;
+	transition: left 1s;
+}
+
+#scrollerContent #rules,#scrollerContent #regFormData,#scrollerContent #confirm{
+	float:left;
+	padding: 10px;
+	box-sizing: border-box;
+	height: 416px;
+	width: 410px;
+}
+
+#mainWindow {
+	width: 500px;
+	height: 480px;
+	margin: auto;
+	background-color: #2a2a2a; 
+	background-image:-webkit-radial-gradient(rgba(255,255,255,0.1), rgba(255,255,255,0.0)); 
+	border-radius: 20px;
+	box-shadow: 0px 0px 0px 10px rgba(0,0,0,0.1),inset 0px 0px 200px 0px  rgba(0,0,0,0.5);
+	box-sizing: border-box;
+	position: relative;
+	margin-top: -240px;
+	top: 50%;
+}
+
+#nextBtn{
+	float: right;
+	display: block;
+	border: 0px;
+	margin: 0px;
+	padding: 0px;
+	width: 90px;
+	height: 100%;
+	border-radius: 0px 20px 20px 0px;
+	background: #33b4d6 url('images/arrow.png');
+	background-repeat: no-repeat;
+	background-position: 50% 50%;
+	box-shadow: inset 0px 0px 50px 0px rgba(0,0,0,0.3);
+	font-size: 20px;
+	color: white;
+	-webkit-font-smoothing: antialiased;
+    font-smoothing: antialiased;
+	box-sizing: border-box;
+	text-transform: uppercase;
+	text-align: center;
+	cursor: pointer;
+	-webkit-user-select: none;
+	-webkit-transition: background 0.3s;
+}
+
+#nextBtn:before {
+	content: '';
+	display: inline-block;
+	width: 55px;
+	height: 78px;
+	
+	position: relative;
+	margin-top: -50%;
+	top: 50%;
+	-webkit-user-select: none;
+}
+
+#nextBtn:hover{
+	background-color: #6dd633;
+}
+
+#nextBtn:disabled {
+	background-color: #ccc;
+}
+
+#nextBtn:disabled:hover{
+	background-color: #777;
+}
+
+#regBlock{
+	width:100%;
+	height: 100%;
+}
+
+#infoBar{
+	height: 64px;
+	border-bottom: 1px solid rgba(255,255,255,0.05);
+	box-shadow: 0px 2px 0px -1px rgba(0,0,0,0.1);
+	color: white;
+	padding: 20px;
+	font-size: 20px;
+	-webkit-font-smoothing: antialiased;
+    font-smoothing: antialiased;
+	box-sizing: border-box;
+	text-transform: uppercase;
+}
+
+#regFormData {
+	text-align: center;
+	overflow: hidden;
+}
+
+#regFormData ul{
+	list-style: none;
+	margin: auto;
+	padding: 0px;
+	text-align: left;
+	width: 250px;
+
+}
+#regFormData ul li{
+	margin: 8px 0px;
+	padding: 0px;
+	width: 250px;
+	position: relative;
+}
+
+#regFormData span {
+	font-size: 15px;
+	display: block;
+	padding:0px;
+	margin: 0px 0px 3px 0px;
+	color: #e4e4e4;
+}
+
+#regFormData input{
+	display: inline-block;
+	width: 250px;
+	border-radius: 5px;
+	border: 1px solid #a3c4cd;
+	box-shadow: 0px 1px 2px 0px rgba(0,0,0,0.5);
+	background-image:-webkit-linear-gradient(#ffffff ,#e5e5e5); 
+	font-size: 15px;
+	outline: none;
+	padding: 3px 25px 3px 10px;
+	margin : 0px;
+	color: #2e2e2e;
+	box-sizing:border-box;
+	height: 30px;
+}
+
+#regFormData input:focus, #regFormData input:active{
+	background-image:-webkit-linear-gradient(#ffffff, #f0f0f0); 
+	border: 1px solid #b0f8f9;
+	box-shadow: 0px 0px 2px 0px rgba(255,255,255,0.5);
+}
+
+#confirm {
+	color:white;
+}
+
+.icon:after{
+	content: "";
+	display: inline-block;
+	position: absolute;
+	width: 18px;
+	height: 18px;
+	box-sizing:border-box;
+	margin-top: 6px;
+	margin-left: -24px;	
+	background: url('images/icons.png');
+	background-repeat: no-repeat;
+}
+
+.icon-user:after {
+	background-position: 0px -18px;
+}
+
+.icon-number:after {
+	background-position: -18px 0px;
+}
+
+.icon-pass:after {
+	background-position: 0px 0px;
+}
+
+.icon-mail:after {
+	background-position: -36px 0px;
+}
+
+#regFormData .input-error input {
+	border: 1px solid #ff7272;
+	box-shadow: 0px 1px 2px 0px rgba(255,0,0,0.5);
+ }
+
+ #regFormData .input-error input:focus,  #regFormData .input-error input:active{
+	box-shadow: none;
+ }
+
+ #regFormData .input-correct input {
+	border: 1px solid #86ff72;
+	box-shadow: 0px 1px 2px 0px rgba(0,255,0,0.3);
+ }
+
+ #regFormData .input-correct input:focus,  #regFormData .input-correct input:active {
+	box-shadow: none;
+ }
+
+
+.input-correct.icon:after {
+	background-position: -18px -18px;
+ }
+
+ .input-error.icon:after {
+	background-position: -36px -18px;
+ }
+
+.tool-tip {
+	position:absolute;
+	display:block;
+	padding: 3px 10px;
+	font-size: 11px;
+	margin-top: -15px;
+	min-width: 100px;
+	right:-13px;
+	text-align:center;
+		visibility:hidden;
+	border-radius: 5px;
+	box-shadow: 0px 3px 3px 0px rgba(0,0,0,0.3);
+	color: black !important;
+	z-index: 1;
+	opacity: 0.1;
+	-webkit-transition:visibility 0.3s,opacity 0.3s;
+}
+
+.tool-tip:before, .tool-tip:after{
+	content:'';
+	position:absolute;
+}
+
+.tool-tip:before{
+	display: block;
+	margin: 0px;
+	padding: 0px;
+	border: 0px;
+	bottom:-4px;
+	right:25px;
+	width:7px;
+	height:7px;
+	-webkit-transform:rotate(45deg);
+	z-index:1;
+	box-shadow:3px 3px 3px 0px rgba(0,0,0,0.3);
+}
+
+.tool-tip.red {
+	color:white !important;
+	background-image:-webkit-linear-gradient(#e31e17, #cc170e); 
+}
+
+.tool-tip.red:before {
+	background-image:-webkit-linear-gradient(-45deg,#d21b13, #c31f15); 
+}
+
+.tool-tip-show{
+	opacity: 0.9;
+	visibility:visible;
+}
+
+.navi-bar {
+	display: block;
+	list-style: none;
+	margin: 0px;
+	padding: 0px;
+	float:left;
+	text-transform: none;	
+}
+
+.navi-bar li {
+	display: block;
+	list-style: none;
+	margin: 0px;
+	padding: 0px;
+	text-align: left;
+	float:left;
+}
+
+.lang-panel {
+	display: block;
+	list-style: none;
+	margin: 0px;
+	padding: 0px;
+	float:right;
+	text-align: center;
+	text-transform: none;
+}
+
+.lang-panel li {
+	display: block;
+	float: right;
+	font-size: 10px;
+	margin: 0px 5px;
+	cursor: pointer;
+	user-select:none;
+}
+
+.lang-panel li:hover {
+	text-decoration: underline;
+}
+
+.lang-panel li:before {
+	display: block;
+	content: '';
+	width:16px;
+	height: 11px;
+	margin: auto;
+	background: url('images/icons.png');
+	background-repeat: no-repeat;
+}
+
+.lang-panel .lang-ua:before {
+	background-position: 0px -36px;
+}
+
+.lang-panel .lang-eng:before {
+	background-position: -16px -36px;
+}
