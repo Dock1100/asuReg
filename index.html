@@ -1,0 +1,73 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><title>
+	Index
+</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+	<script type="text/javascript" src="js/scroller.js"></script>
+</head>
+<body>
+	<div id="mainWindow">
+	<form method="post" id="regBlock" onsubmit="return false" >		
+		<input type="submit" name="nextBtn" value="" id="nextBtn" disabled>
+		<div style="overflow: hidden">
+			<div id="infoBar">
+				<ul class="navi-bar">
+					<li>Правила</li>
+					<li>?</li>
+				</ul>
+				<ul class="lang-panel" id="langPanel">
+					<li class="lang-ua" data-lang="ua">ua</li>
+					<li class="lang-eng" data-lang="eng">eng</li>
+				</ul>
+			</div>
+			<div id="scroller">
+				<div id="scrollerContent">
+					<div id="rules">
+						Правила:<br>
+						1. Адмін завжди правий<br>
+						2. Див. пункт 1<br>
+						<span id="wait"></span>
+					</div>
+					<div id="regFormData">
+						<ul>
+							<li>
+								<span>Ім'я</span>
+								<div class="tool-tip red"></div>
+								<span class="icon icon-user"><input name="Name" type="text" id="Name" placeholder="Name"></span>
+							</li>
+							<li>
+								<span>Прізвище</span>
+								<div class="tool-tip red"></div>
+								<span class="icon icon-user"><input name="SurName" type="text" id="SurName" placeholder="SurName"></span>
+							</li>
+							<li>
+								<span>Номер залікової книжки</span>
+								<div class="tool-tip red"></div>
+								<span class="icon icon-number"><input name="Group" type="text" id="Group" placeholder="Group"></span></li>
+							<li>
+								<span>Пароль</span>
+								<div class="tool-tip red"></div>
+								<span class="icon icon-pass"><input name="Pass" type="password" id="Pass" placeholder="Pass"></span>
+							</li>
+							<li>
+								<span>Підтвердження паролю</span>
+								<div class="tool-tip red"></div>
+								<span class="icon icon-pass"><input name="CPass" type="password" id="CPass" placeholder="Cpass"></span>
+							</li>
+							<li>
+								<span>Електронна пошта</span>
+								<div class="tool-tip red"></div>
+								<span class="icon icon-mail"><input name="EMail" type="text" id="EMail" placeholder="Email"></span>
+							</li>
+						</ul>
+					</div>
+		            <div id="confirm">
+
+		            </div>
+				</div>
+			</div>
+		</div>
+		</form>
+	</div>
+</body>
+</html>
